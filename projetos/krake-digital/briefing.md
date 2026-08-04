@@ -51,6 +51,14 @@ Site: `https://www.verogusto.com.br`
 
 Gabriel informou que criou o projeto completo. A apresentação poderá mencionar planejamento, estrutura, textos, design e desenvolvimento. Não atribuir números ou resultados comerciais sem dados que os comprovem.
 
+**Super Limpo Brasil — Landing page de produto**
+Site: `https://superlimpobrasil.com/`
+
+**Mentoria Concursos — Campanha TCE-MA**
+Site: `https://mentoriaconcursos.app.br/tce-ma`
+
+Os projetos serão apresentados com miniaturas fiéis e demonstração interativa em modal dentro do site da Krake. O visitante poderá navegar e rolar cada página sem sair do portfólio. Os botões não devem direcionar a janela principal para outro domínio.
+
 ## Funcionalidades e integrações
 
 - Botões para o WhatsApp `+55 61 98449-4617`

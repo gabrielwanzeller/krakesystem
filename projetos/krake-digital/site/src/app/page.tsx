@@ -5,21 +5,20 @@ import {
   BarChart3,
   Check,
   ChevronRight,
+  CircleCheckBig,
+  CircleX,
   Code2,
-  ExternalLink,
-  Gauge,
   Layers3,
   MapPin,
   MessageCircle,
   MousePointerClick,
-  Search,
   ShieldCheck,
   Smartphone,
   Sparkles,
   Target,
-  WandSparkles,
 } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
+import { ProjectShowcase } from "@/components/project-showcase";
 import { cn } from "@/lib/utils";
 
 const whatsappUrl =
@@ -41,6 +40,24 @@ const benefits = [
     title: "Caminho para o contato",
     text: "Cada seção conduz o visitante até uma conversa com sua empresa.",
   },
+];
+
+const journeyWithoutSite = [
+  ["Surge uma necessidade", "O cliente percebe que precisa de um produto ou serviço."],
+  ["Ele pesquisa no Google", "Antes de conversar, procura empresas e compara alternativas."],
+  ["Encontra poucas informações", "Não consegue entender claramente seus serviços ou diferenciais."],
+  ["A confiança diminui", "Sem respostas suficientes, fica inseguro para iniciar o contato."],
+  ["Continua procurando", "Mesmo que seu trabalho seja excelente, ele ainda não conseguiu perceber isso."],
+  ["Outra empresa recebe o contato", "Um concorrente mais bem apresentado pode se tornar a escolha mais fácil."],
+];
+
+const journeyWithSite = [
+  ["Surge uma necessidade", "O cliente começa a procurar uma empresa que possa ajudá-lo."],
+  ["Encontra sua empresa", "Sua presença digital facilita a descoberta e a avaliação."],
+  ["Conhece melhor o negócio", "O site apresenta serviços, diferenciais e sua forma de trabalhar."],
+  ["Encontra respostas", "Informações claras diminuem as dúvidas antes do primeiro contato."],
+  ["Sente mais confiança", "Uma apresentação profissional reforça o valor percebido da empresa."],
+  ["Conversa com você", "O cliente encontra um caminho simples para chamar sua empresa no WhatsApp."],
 ];
 
 const process = [
@@ -137,19 +154,19 @@ export default function Home() {
 
       <section id="inicio" className="relative min-h-[calc(100svh-80px)] border-b border-white/10">
         <div className="grid-lines absolute inset-0" aria-hidden="true" />
-        <div className="container-site relative grid min-h-[calc(100svh-80px)] items-center gap-14 py-20 lg:grid-cols-[1.15fr_0.85fr]">
-          <div>
+        <div className="container-site relative flex min-h-[calc(100svh-80px)] items-center justify-center py-20 text-center">
+          <div className="flex w-full max-w-5xl flex-col items-center">
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-4 py-2 text-sm text-white/75">
               <MapPin aria-hidden="true" size={16} className="text-[#EBF400]" />
               Sites e soluções digitais em Brasília
             </div>
-            <h1 className="max-w-4xl text-5xl font-semibold leading-[1.04] tracking-[-0.045em] text-white sm:text-6xl lg:text-7xl">
+            <h1 className="mx-auto max-w-5xl text-5xl font-semibold leading-[1.04] tracking-[-0.045em] text-white sm:text-6xl lg:text-7xl">
               Sites profissionais para sua empresa <span className="gradient-text">crescer.</span>
             </h1>
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-white/65 sm:text-xl">
+            <p className="mx-auto mt-7 max-w-2xl text-lg leading-8 text-white/65 sm:text-xl">
               Criamos sites modernos e estratégicos que valorizam sua marca e ajudam a transformar visitantes em clientes.
             </p>
-            <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
               <WhatsAppLink>
                 <MessageCircle aria-hidden="true" size={20} />
                 Quero conversar sobre meu site
@@ -159,35 +176,12 @@ export default function Home() {
                 <ArrowRight aria-hidden="true" size={18} />
               </Link>
             </div>
-            <p className="mt-5 flex items-center gap-2 text-sm text-white/45">
+            <p className="mt-5 flex items-center justify-center gap-2 text-sm text-white/45">
               <ShieldCheck aria-hidden="true" size={16} />
               Uma conversa simples, sem compromisso e sem pressão.
             </p>
           </div>
-
-          <div className="relative hidden lg:block" aria-hidden="true">
-            <div className="absolute -inset-10 rounded-full bg-gradient-to-br from-[#005CFF]/20 via-[#A700FF]/20 to-[#EBF400]/10 blur-3xl" />
-            <div className="glass relative aspect-square overflow-hidden rounded-[40px] p-10 shadow-2xl shadow-black/30">
-              <div className="flex h-full flex-col justify-between">
-                <div className="flex items-center justify-between">
-                  <Image src="/brand/krake-symbol-yellow.svg" alt="" width={74} height={74} />
-                  <span className="rounded-full border border-white/15 px-3 py-1 text-xs text-white/45">digital com propósito</span>
-                </div>
-                <div className="space-y-4">
-                  <div className="h-3 w-20 rounded-full bg-[#EBF400]" />
-                  <p className="max-w-xs text-3xl font-semibold leading-tight">Sua empresa merece ser bem apresentada.</p>
-                  <div className="grid grid-cols-3 gap-3 pt-5">
-                    {[Search, WandSparkles, Gauge].map((Icon, index) => (
-                      <div key={index} className="flex aspect-square items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04]">
-                        <Icon size={28} className="text-white/70" />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
-        </div>
       </section>
 
       <section className="section-pad border-b border-white/10">
@@ -211,6 +205,89 @@ export default function Home() {
                 <p className="mt-3 leading-7 text-white/55">{text}</p>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="jornada" className="section-pad border-b border-white/10">
+        <div className="container-site">
+          <div className="mx-auto max-w-4xl text-center">
+            <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#EBF400]">A jornada até o contato</span>
+            <h2 className="mt-4 text-4xl font-semibold tracking-[-0.035em] sm:text-5xl">O caminho do seu cliente começa antes da conversa.</h2>
+            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-white/60">
+              Antes de mandar uma mensagem, muitas pessoas pesquisam sua empresa. O que elas encontram pode aumentar a confiança ou fazer com que continuem procurando.
+            </p>
+          </div>
+
+          <div className="mt-16 grid gap-6 lg:grid-cols-2">
+            <article className="rounded-[32px] border border-[#ff7d7d]/20 bg-[#150a22]/80 p-7 sm:p-9">
+              <div className="flex items-center gap-4 border-b border-white/10 pb-7">
+                <span className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-[#ff5e68]/10 text-[#ff8d94]">
+                  <CircleX aria-hidden="true" size={25} />
+                </span>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#ff8d94]">Sem um bom site</p>
+                  <h3 className="mt-1 text-2xl font-semibold">A oportunidade pode se perder</h3>
+                </div>
+              </div>
+
+              <ol className="mt-8">
+                {journeyWithoutSite.map(([title, text], index) => (
+                  <li key={title} className="relative grid grid-cols-[40px_1fr] gap-4 pb-8 last:pb-0">
+                    {index < journeyWithoutSite.length - 1 && (
+                      <span className="absolute left-[19px] top-10 h-[calc(100%-24px)] w-px bg-gradient-to-b from-[#ff7d7d]/45 to-[#ff7d7d]/5" aria-hidden="true" />
+                    )}
+                    <span className="relative z-10 flex size-10 items-center justify-center rounded-full border border-[#ff7d7d]/30 bg-[#150a22] text-sm font-semibold text-[#ff9da3]">
+                      {index + 1}
+                    </span>
+                    <div className="pt-1">
+                      <h4 className="font-semibold text-white/90">{title}</h4>
+                      <p className="mt-2 text-sm leading-6 text-white/50">{text}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </article>
+
+            <article className="relative overflow-hidden rounded-[32px] border border-[#EBF400]/25 bg-[#08112b]/90 p-7 sm:p-9">
+              <div className="pointer-events-none absolute -right-24 -top-24 size-72 rounded-full bg-[#005CFF]/15 blur-3xl" aria-hidden="true" />
+              <div className="relative flex items-center gap-4 border-b border-white/10 pb-7">
+                <span className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-[#EBF400]/10 text-[#EBF400]">
+                  <CircleCheckBig aria-hidden="true" size={25} />
+                </span>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#EBF400]">Com um site profissional</p>
+                  <h3 className="mt-1 text-2xl font-semibold">O próximo passo fica mais claro</h3>
+                </div>
+              </div>
+
+              <ol className="relative mt-8">
+                {journeyWithSite.map(([title, text], index) => (
+                  <li key={title} className="relative grid grid-cols-[40px_1fr] gap-4 pb-8 last:pb-0">
+                    {index < journeyWithSite.length - 1 && (
+                      <span className="absolute left-[19px] top-10 h-[calc(100%-24px)] w-px bg-gradient-to-b from-[#EBF400]/55 to-[#005CFF]/15" aria-hidden="true" />
+                    )}
+                    <span className="relative z-10 flex size-10 items-center justify-center rounded-full border border-[#EBF400]/35 bg-[#08112b] text-sm font-semibold text-[#EBF400]">
+                      {index + 1}
+                    </span>
+                    <div className="pt-1">
+                      <h4 className="font-semibold text-white">{title}</h4>
+                      <p className="mt-2 text-sm leading-6 text-white/55">{text}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </article>
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="mx-auto max-w-3xl text-xl font-medium leading-8 text-white/85">
+              Seu site não precisa apenas existir. Ele precisa ajudar o cliente a entender, confiar e dar o próximo passo.
+            </p>
+            <WhatsAppLink className="mt-7">
+              <MessageCircle aria-hidden="true" size={20} />
+              Quero melhorar minha presença digital
+            </WhatsAppLink>
           </div>
         </div>
       </section>
@@ -278,33 +355,14 @@ export default function Home() {
 
       <section id="portfolio" className="section-pad border-b border-white/10">
         <div className="container-site">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-[#13134e] to-[#050526] p-8 sm:p-10">
-              <div className="absolute right-0 top-0 size-56 rounded-full bg-[#EBF400]/10 blur-3xl" />
-              <span className="relative text-sm font-medium text-white/50">Projeto em destaque</span>
-              <div className="relative mt-20 rounded-2xl border border-white/10 bg-[#080824] p-5 shadow-2xl">
-                <div className="flex items-center gap-2 border-b border-white/10 pb-4">
-                  <span className="size-2.5 rounded-full bg-[#ff6b6b]" />
-                  <span className="size-2.5 rounded-full bg-[#ffd93d]" />
-                  <span className="size-2.5 rounded-full bg-[#6bcb77]" />
-                  <span className="ml-3 text-xs text-white/35">verogusto.com.br</span>
-                </div>
-                <div className="py-10 text-center">
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#f7b955]">Rodízio de pizza para eventos</p>
-                  <p className="mx-auto mt-4 max-w-sm text-3xl font-semibold">Seu evento merece uma experiência inesquecível.</p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#EBF400]">Portfólio</span>
-              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.035em] sm:text-5xl">Vero Gusto</h2>
-              <p className="mt-5 text-xl text-white/75">Site para um serviço de rodízio de pizza artesanal em eventos de Brasília.</p>
-              <p className="mt-6 leading-8 text-white/55">Projeto completo com planejamento, estrutura, textos, design e desenvolvimento. A página apresenta a experiência do serviço, responde dúvidas e conduz o visitante ao pedido de orçamento.</p>
-              <a className={cn(buttonVariants({ variant: "outline", size: "lg" }), "mt-8")} href="https://www.verogusto.com.br" target="_blank" rel="noreferrer">
-                Visitar o projeto <ExternalLink aria-hidden="true" size={18} />
-              </a>
-            </div>
+          <div className="mb-14 text-center">
+            <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#EBF400]">Portfólio</span>
+            <h2 className="mx-auto mt-4 max-w-3xl text-4xl font-semibold tracking-[-0.035em] sm:text-5xl">Projeto em destaque</h2>
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-white/60">
+              Conheça diferentes páginas criadas para apresentar ofertas com clareza e conduzir cada público até a ação certa.
+            </p>
           </div>
+          <ProjectShowcase />
         </div>
       </section>
 
