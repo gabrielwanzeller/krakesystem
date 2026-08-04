@@ -1,0 +1,4 @@
+interface:
+  display_name: "Criar Landing Page"
+  short_description: "Cria páginas focadas em conversão"
+  default_prompt: "Use $criar-landing-page para criar uma landing page focada em conversão."

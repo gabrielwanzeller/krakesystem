@@ -1,0 +1,4 @@
+interface:
+  display_name: "Publicar Site"
+  short_description: "Prepara e publica sites com segurança"
+  default_prompt: "Use $publicar-site para preparar e publicar este site com segurança."

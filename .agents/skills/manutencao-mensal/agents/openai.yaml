@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manutenção Mensal"
+  short_description: "Executa manutenção e relatório mensal"
+  default_prompt: "Use $manutencao-mensal para revisar o site e gerar o relatório mensal."

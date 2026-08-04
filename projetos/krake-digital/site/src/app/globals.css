@@ -1,0 +1,126 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  --font-poppins: "Poppins";
+  --background: #02021e;
+  --foreground: #f8f8ff;
+  --muted: #aaaac0;
+  --card: #09092f;
+  --card-strong: #0e0e45;
+  --border: rgba(255, 255, 255, 0.12);
+  --brand: #ebf400;
+  --blue: #005cff;
+  --purple: #a700ff;
+  --pink: #ff01ff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-poppins);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-poppins), Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--brand);
+  color: var(--background);
+}
+
+.page-shell {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-shell::before {
+  position: absolute;
+  top: -240px;
+  left: 50%;
+  width: 940px;
+  height: 620px;
+  content: "";
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 25% 40%, rgba(0, 92, 255, 0.3), transparent 34%),
+    radial-gradient(circle at 75% 28%, rgba(167, 0, 255, 0.22), transparent 30%);
+  filter: blur(22px);
+  transform: translateX(-50%);
+}
+
+.container-site {
+  width: min(1180px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.section-pad {
+  padding-block: 112px;
+}
+
+.glass {
+  background: rgba(9, 9, 47, 0.68);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(18px);
+}
+
+.gradient-text {
+  color: transparent;
+  background: linear-gradient(90deg, #ebf400 0%, #b9f55b 45%, #57c7ff 100%);
+  background-clip: text;
+}
+
+.grid-lines {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black 20%, transparent 95%);
+}
+
+.focus-ring:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+  .container-site {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .section-pad {
+    padding-block: 76px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

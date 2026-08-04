@@ -1,0 +1,4 @@
+interface:
+  display_name: "Gerar Proposta"
+  short_description: "Gera propostas comerciais personalizadas"
+  default_prompt: "Use $gerar-proposta para montar uma proposta comercial clara e personalizada."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Criar Site"
+  short_description: "Planeja e constrói sites profissionais"
+  default_prompt: "Use $criar-site para planejar e construir um site profissional completo."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Briefing de Cliente"
+  short_description: "Conduz briefings comerciais completos"
+  default_prompt: "Use $briefing-cliente para conduzir e registrar o briefing de um novo cliente."

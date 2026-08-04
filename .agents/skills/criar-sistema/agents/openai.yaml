@@ -1,0 +1,4 @@
+interface:
+  display_name: "Criar Sistema"
+  short_description: "Planeja e desenvolve sistemas sob medida"
+  default_prompt: "Use $criar-sistema para planejar e desenvolver um sistema sob medida."
