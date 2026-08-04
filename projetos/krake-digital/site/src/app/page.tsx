@@ -17,7 +17,6 @@ import {
   Rocket,
   ShieldCheck,
   Smartphone,
-  Sparkles,
 } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { ProjectShowcase } from "@/components/project-showcase";
@@ -520,7 +519,6 @@ export default function Home() {
           <div className="relative overflow-hidden rounded-[36px] bg-[#EBF400] px-7 py-16 text-center text-[#02021E] sm:px-12 sm:py-20">
             <span className="cta-krake-symbol" aria-hidden="true" />
             <div className="relative z-10">
-              <Sparkles className="mx-auto" aria-hidden="true" size={32} />
               <h2 className="mx-auto mt-6 max-w-4xl text-4xl font-semibold tracking-[-0.04em] sm:text-6xl">Vamos transformar a presença digital da sua empresa?</h2>
               <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#02021E]/65">Conte um pouco sobre seu negócio. Vamos conversar com clareza e entender qual solução faz sentido para você.</p>
               <WhatsAppLink className="mt-9 bg-[#02021E] text-white shadow-none hover:bg-[#0E0E45]"><MessageCircle size={20} /> Conversar no WhatsApp</WhatsAppLink>
