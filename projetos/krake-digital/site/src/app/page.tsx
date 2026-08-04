@@ -4,6 +4,7 @@ import {
   ArrowRight,
   BarChart3,
   Check,
+  ChevronDown,
   ChevronRight,
   CircleCheckBig,
   CircleX,
@@ -192,6 +193,13 @@ export default function Home() {
               <ShieldCheck aria-hidden="true" size={16} />
               Uma conversa simples, sem compromisso e sem pressão.
             </p>
+            <Link
+              className="focus-ring mt-7 inline-flex size-11 items-center justify-center rounded-full border border-white/15 bg-white/[0.04] text-[#EBF400] transition hover:border-[#EBF400]/40 hover:bg-[#EBF400]/10 motion-safe:animate-bounce"
+              href="#dados"
+              aria-label="Continuar para a próxima seção"
+            >
+              <ChevronDown aria-hidden="true" size={23} />
+            </Link>
           </div>
           </div>
       </section>
