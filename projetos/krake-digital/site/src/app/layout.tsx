@@ -7,6 +7,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://krakeagencia.com"),
+  alternates: {
+    canonical: "/",
+  },
   title: "Krake Digital | Sites profissionais em Brasília",
   description:
     "Sites modernos e estratégicos para valorizar sua empresa e transformar visitantes em novas conversas.",
@@ -17,6 +20,9 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     type: "website",
     url: "https://krakeagencia.com",
+  },
+  icons: {
+    icon: "/brand/krake-symbol-yellow.svg",
   },
 };
 
