@@ -148,6 +148,7 @@ export default function Home() {
             <Link className="focus-ring rounded hover:text-white" href="#processo">Como funciona</Link>
             <Link className="focus-ring rounded hover:text-white" href="#portfolio">Projeto</Link>
             <Link className="focus-ring rounded hover:text-white" href="#sobre">Sobre</Link>
+            <Link className="focus-ring rounded hover:text-white" href="/blog">Blog</Link>
           </nav>
           <a
             className={buttonVariants({ variant: "primary" })}
@@ -498,6 +499,7 @@ export default function Home() {
           <div className="flex flex-wrap gap-x-6 gap-y-3">
             <Link className="focus-ring rounded hover:text-white" href="#servicos">Serviços</Link>
             <Link className="focus-ring rounded hover:text-white" href="#portfolio">Portfólio</Link>
+            <Link className="focus-ring rounded hover:text-white" href="/blog">Blog</Link>
             <Link className="focus-ring rounded hover:text-white" href="/politica-de-privacidade">Privacidade</Link>
           </div>
           <p>© {new Date().getFullYear()} Krake Digital · CNPJ 55.461.568/0001-00</p>
