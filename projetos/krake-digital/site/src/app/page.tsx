@@ -430,10 +430,10 @@ export default function Home() {
                     <Icon aria-hidden="true" size={28} className="lg:size-9" />
                     <span className="absolute -right-2 -top-2 flex size-7 items-center justify-center rounded-full border border-white/15 bg-[#02021E] text-[10px] font-semibold text-white/65 lg:size-8 lg:text-xs">{number}</span>
                   </div>
-                  <div className="glass min-h-full rounded-3xl p-6 lg:mt-7 lg:min-h-[290px] lg:p-7">
+                  <div className="pt-1 lg:mt-8 lg:px-3 lg:pt-0 lg:text-center">
                     <h3 className="text-2xl font-semibold">{title}</h3>
                     <p className="mt-3 text-sm leading-7 text-white/55">{text}</p>
-                    <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-medium text-white/75">
+                    <div className="mt-5 inline-flex items-center gap-2 text-xs font-medium text-white/75">
                       <Check aria-hidden="true" size={14} className="text-[#EBF400]" />
                       {delivery}
                     </div>
@@ -443,7 +443,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-10 flex flex-col items-center justify-between gap-6 rounded-[28px] border border-white/10 bg-white/[0.035] px-7 py-8 text-center lg:flex-row lg:px-10 lg:text-left">
+          <div className="mt-14 flex flex-col items-center justify-between gap-6 border-t border-white/15 pt-9 text-center lg:flex-row lg:text-left">
             <div className="max-w-3xl">
               <h3 className="text-xl font-semibold">Você sempre sabe em qual etapa o projeto está.</h3>
               <p className="mt-2 leading-7 text-white/55">Cada fase é apresentada, explicada e aprovada antes de avançarmos.</p>
@@ -518,10 +518,13 @@ export default function Home() {
       <section className="section-pad section-gradient-brand">
         <div className="container-site">
           <div className="relative overflow-hidden rounded-[36px] bg-[#EBF400] px-7 py-16 text-center text-[#02021E] sm:px-12 sm:py-20">
-            <Sparkles className="mx-auto" aria-hidden="true" size={32} />
-            <h2 className="mx-auto mt-6 max-w-4xl text-4xl font-semibold tracking-[-0.04em] sm:text-6xl">Vamos transformar a presença digital da sua empresa?</h2>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#02021E]/65">Conte um pouco sobre seu negócio. Vamos conversar com clareza e entender qual solução faz sentido para você.</p>
-            <WhatsAppLink className="mt-9 bg-[#02021E] text-white shadow-none hover:bg-[#0E0E45]"><MessageCircle size={20} /> Conversar no WhatsApp</WhatsAppLink>
+            <span className="cta-krake-symbol" aria-hidden="true" />
+            <div className="relative z-10">
+              <Sparkles className="mx-auto" aria-hidden="true" size={32} />
+              <h2 className="mx-auto mt-6 max-w-4xl text-4xl font-semibold tracking-[-0.04em] sm:text-6xl">Vamos transformar a presença digital da sua empresa?</h2>
+              <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#02021E]/65">Conte um pouco sobre seu negócio. Vamos conversar com clareza e entender qual solução faz sentido para você.</p>
+              <WhatsAppLink className="mt-9 bg-[#02021E] text-white shadow-none hover:bg-[#0E0E45]"><MessageCircle size={20} /> Conversar no WhatsApp</WhatsAppLink>
+            </div>
           </div>
         </div>
       </section>

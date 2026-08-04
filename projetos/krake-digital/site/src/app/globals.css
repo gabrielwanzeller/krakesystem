@@ -101,6 +101,30 @@ a {
     linear-gradient(180deg, rgba(2, 2, 30, 0) 0%, rgba(8, 11, 48, 0.7) 50%, rgba(2, 2, 30, 0) 100%);
 }
 
+.cta-krake-symbol {
+  position: absolute;
+  right: -72px;
+  bottom: -118px;
+  width: 430px;
+  aspect-ratio: 1;
+  pointer-events: none;
+  background: #02021e;
+  opacity: 0.08;
+  mask: url("/brand/krake-symbol-yellow.svg") center / contain no-repeat;
+  animation: krake-float 8s ease-in-out infinite;
+}
+
+@keyframes krake-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+
+  50% {
+    transform: translateY(-14px) rotate(2deg);
+  }
+}
+
 .glass {
   background: rgba(9, 9, 47, 0.68);
   border: 1px solid var(--border);
@@ -133,6 +157,14 @@ a {
 
   .section-pad {
     padding-block: 76px;
+  }
+
+  .cta-krake-symbol {
+    right: 50%;
+    bottom: -108px;
+    width: 340px;
+    transform: translateX(50%);
+    animation: none;
   }
 }
 
