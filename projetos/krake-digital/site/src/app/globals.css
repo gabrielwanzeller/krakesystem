@@ -109,7 +109,20 @@ a {
   aspect-ratio: 1;
   pointer-events: none;
   background: #ebf400;
-  opacity: 0.065;
+  opacity: 0.045;
+  mask: url("/brand/krake-symbol-yellow.svg") center / contain no-repeat;
+  animation: krake-float 10s ease-in-out infinite;
+}
+
+.cta-krake-symbol {
+  position: absolute;
+  right: -72px;
+  bottom: -118px;
+  width: 430px;
+  aspect-ratio: 1;
+  pointer-events: none;
+  background: #02021e;
+  opacity: 0.08;
   mask: url("/brand/krake-symbol-yellow.svg") center / contain no-repeat;
   animation: krake-float 10s ease-in-out infinite;
 }
@@ -163,7 +176,16 @@ a {
     right: -120px;
     bottom: -80px;
     width: 360px;
-    opacity: 0.045;
+    opacity: 0.03;
+  }
+
+  .cta-krake-symbol {
+    right: 50%;
+    bottom: -108px;
+    width: 340px;
+    opacity: 0.07;
+    transform: translateX(50%);
+    animation: none;
   }
 }
 

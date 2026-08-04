@@ -193,15 +193,15 @@ export default function Home() {
               <ShieldCheck aria-hidden="true" size={16} />
               Uma conversa simples, sem compromisso e sem pressão.
             </p>
-            <Link
-              className="focus-ring mt-7 inline-flex size-11 items-center justify-center rounded-full border border-white/15 bg-white/[0.04] text-[#EBF400] transition hover:border-[#EBF400]/40 hover:bg-[#EBF400]/10 motion-safe:animate-bounce"
-              href="#dados"
-              aria-label="Continuar para a próxima seção"
-            >
-              <ChevronDown aria-hidden="true" size={23} />
-            </Link>
           </div>
-          </div>
+        </div>
+        <Link
+          className="focus-ring absolute bottom-8 left-1/2 z-20 inline-flex size-11 -translate-x-1/2 items-center justify-center rounded-full border border-white/15 bg-white/[0.04] text-[#EBF400] transition hover:border-[#EBF400]/40 hover:bg-[#EBF400]/10 sm:bottom-10"
+          href="#dados"
+          aria-label="Continuar para a próxima seção"
+        >
+          <ChevronDown aria-hidden="true" size={23} className="motion-safe:animate-bounce" />
+        </Link>
       </section>
 
       <section id="dados" className="section-pad section-gradient-blue border-b border-white/10">
@@ -526,6 +526,7 @@ export default function Home() {
       <section className="section-pad section-gradient-brand">
         <div className="container-site">
           <div className="relative overflow-hidden rounded-[36px] bg-[#EBF400] px-7 py-16 text-center text-[#02021E] sm:px-12 sm:py-20">
+            <span className="cta-krake-symbol" aria-hidden="true" />
             <div className="relative z-10">
               <h2 className="mx-auto mt-6 max-w-4xl text-4xl font-semibold tracking-[-0.04em] sm:text-6xl">Vamos transformar a presença digital da sua empresa?</h2>
               <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#02021E]/65">Conte um pouco sobre seu negócio. Vamos conversar com clareza e entender qual solução faz sentido para você.</p>
