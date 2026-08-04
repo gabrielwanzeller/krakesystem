@@ -75,6 +75,32 @@ a {
   padding-block: 112px;
 }
 
+.section-gradient-blue {
+  background:
+    radial-gradient(ellipse 72% 58% at -8% 48%, rgba(0, 92, 255, 0.16), transparent 68%),
+    linear-gradient(180deg, rgba(2, 2, 30, 0) 0%, rgba(6, 9, 47, 0.78) 52%, rgba(2, 2, 30, 0) 100%);
+}
+
+.section-gradient-purple {
+  background:
+    radial-gradient(ellipse 68% 62% at 108% 45%, rgba(167, 0, 255, 0.15), transparent 68%),
+    linear-gradient(180deg, rgba(2, 2, 30, 0) 0%, rgba(18, 4, 45, 0.58) 50%, rgba(2, 2, 30, 0) 100%);
+}
+
+.section-gradient-mixed {
+  background:
+    radial-gradient(ellipse 58% 58% at -8% 30%, rgba(167, 0, 255, 0.12), transparent 70%),
+    radial-gradient(ellipse 60% 62% at 108% 72%, rgba(0, 92, 255, 0.14), transparent 70%),
+    linear-gradient(180deg, rgba(2, 2, 30, 0) 0%, rgba(7, 7, 42, 0.7) 50%, rgba(2, 2, 30, 0) 100%);
+}
+
+.section-gradient-brand {
+  background:
+    radial-gradient(ellipse 48% 55% at 8% 78%, rgba(235, 244, 0, 0.07), transparent 70%),
+    radial-gradient(ellipse 62% 58% at 100% 25%, rgba(0, 92, 255, 0.14), transparent 70%),
+    linear-gradient(180deg, rgba(2, 2, 30, 0) 0%, rgba(8, 11, 48, 0.7) 50%, rgba(2, 2, 30, 0) 100%);
+}
+
 .glass {
   background: rgba(9, 9, 47, 0.68);
   border: 1px solid var(--border);

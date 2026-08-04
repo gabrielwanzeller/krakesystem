@@ -196,7 +196,7 @@ export default function Home() {
           </div>
       </section>
 
-      <section id="dados" className="section-pad border-b border-white/10">
+      <section id="dados" className="section-pad section-gradient-blue border-b border-white/10">
         <div className="container-site">
           <div className="mx-auto max-w-4xl text-center">
             <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#EBF400]">Presença digital em números</span>
@@ -287,7 +287,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="jornada" className="section-pad border-b border-white/10">
+      <section id="jornada" className="section-pad section-gradient-purple border-b border-white/10">
         <div className="container-site">
           <div className="mx-auto max-w-4xl text-center">
             <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#EBF400]">A jornada até o contato</span>
@@ -370,7 +370,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="servicos" className="section-pad border-b border-white/10">
+      <section id="servicos" className="section-pad section-gradient-brand border-b border-white/10">
         <div className="container-site">
           <div className="max-w-3xl">
             <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#EBF400]">Soluções</span>
@@ -413,7 +413,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="processo" className="section-pad border-b border-white/10">
+      <section id="processo" className="section-pad section-gradient-mixed border-b border-white/10">
         <div className="container-site">
           <div className="text-center">
             <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#EBF400]">Como funciona</span>
@@ -456,7 +456,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="portfolio" className="section-pad border-b border-white/10">
+      <section id="portfolio" className="section-pad section-gradient-blue border-b border-white/10">
         <div className="container-site">
           <div className="mb-14 text-center">
             <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#EBF400]">Portfólio</span>
@@ -469,7 +469,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="sobre" className="section-pad border-b border-white/10">
+      <section id="sobre" className="section-pad section-gradient-purple border-b border-white/10">
         <div className="container-site grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-[32px] border border-white/10 bg-[#080829]">
             <Image
@@ -495,7 +495,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="perguntas" className="section-pad border-b border-white/10">
+      <section id="perguntas" className="section-pad section-gradient-mixed border-b border-white/10">
         <div className="container-site grid gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
             <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#EBF400]">Perguntas frequentes</span>
@@ -515,7 +515,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-pad">
+      <section className="section-pad section-gradient-brand">
         <div className="container-site">
           <div className="relative overflow-hidden rounded-[36px] bg-[#EBF400] px-7 py-16 text-center text-[#02021E] sm:px-12 sm:py-20">
             <Sparkles className="mx-auto" aria-hidden="true" size={32} />
