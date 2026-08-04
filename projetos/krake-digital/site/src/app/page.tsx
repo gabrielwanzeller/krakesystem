@@ -422,15 +422,15 @@ export default function Home() {
           </div>
 
           <div className="relative mt-16">
-            <div className="absolute bottom-8 left-8 top-8 w-px bg-gradient-to-b from-[#005CFF]/60 via-[#A700FF]/50 to-[#70e6a1]/30 lg:bottom-auto lg:left-[12.5%] lg:right-[12.5%] lg:top-12 lg:h-px lg:w-auto lg:bg-gradient-to-r" aria-hidden="true" />
+            <div className="absolute left-[12.5%] right-[12.5%] top-12 hidden h-px bg-gradient-to-r from-[#005CFF]/60 via-[#A700FF]/50 to-[#70e6a1]/30 lg:block" aria-hidden="true" />
             <div className="relative grid gap-6 lg:grid-cols-4">
               {process.map(({ number, title, text, delivery, icon: Icon, iconClass }) => (
-                <article key={number} className="relative grid grid-cols-[64px_1fr] gap-4 lg:block">
-                  <div className={cn("relative z-10 flex size-16 items-center justify-center rounded-2xl border shadow-xl shadow-black/20 lg:mx-auto lg:size-24 lg:rounded-3xl", iconClass)}>
-                    <Icon aria-hidden="true" size={28} className="lg:size-9" />
+                <article key={number} className="glass relative rounded-3xl p-6 lg:p-7">
+                  <div className={cn("relative z-10 flex size-16 items-center justify-center rounded-2xl border shadow-xl shadow-black/20 lg:size-20 lg:rounded-[22px]", iconClass)}>
+                    <Icon aria-hidden="true" size={28} className="lg:size-8" />
                     <span className="absolute -right-2 -top-2 flex size-7 items-center justify-center rounded-full border border-white/15 bg-[#02021E] text-[10px] font-semibold text-white/65 lg:size-8 lg:text-xs">{number}</span>
                   </div>
-                  <div className="pt-1 lg:mt-8 lg:px-3 lg:pt-0 lg:text-center">
+                  <div className="mt-6">
                     <h3 className="text-2xl font-semibold">{title}</h3>
                     <p className="mt-3 text-sm leading-7 text-white/55">{text}</p>
                     <div className="mt-5 inline-flex items-center gap-2 text-xs font-medium text-white/75">
@@ -443,7 +443,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-14 flex flex-col items-center justify-between gap-6 border-t border-white/15 pt-9 text-center lg:flex-row lg:text-left">
+          <div className="mt-12 flex flex-col items-center justify-between gap-6 text-center lg:flex-row lg:text-left">
             <div className="max-w-3xl">
               <h3 className="text-xl font-semibold">Você sempre sabe em qual etapa o projeto está.</h3>
               <p className="mt-2 leading-7 text-white/55">Cada fase é apresentada, explicada e aprovada antes de avançarmos.</p>
