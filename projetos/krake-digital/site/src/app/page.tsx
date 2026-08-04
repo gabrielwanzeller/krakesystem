@@ -17,7 +17,6 @@ import {
   MonitorUp,
   Rocket,
   ShieldCheck,
-  Smartphone,
 } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { ProjectShowcase } from "@/components/project-showcase";
@@ -214,8 +213,8 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-14 grid gap-5 md:grid-cols-3">
-            <article className="glass rounded-3xl p-7 sm:p-8">
+          <div className="mt-14 grid border-y border-white/10 md:grid-cols-2">
+            <article className="py-9 md:border-r md:border-white/10 md:px-10 md:py-11">
               <p className="text-5xl font-semibold tracking-[-0.05em] text-[#EBF400]">89%</p>
               <h3 className="mt-5 text-xl font-semibold">do Brasil está conectado</h3>
               <p className="mt-3 text-sm leading-6 text-white/55">Parcela da população com 10 anos ou mais que utilizava a internet em 2024, pelo indicador ampliado.</p>
@@ -224,7 +223,7 @@ export default function Home() {
               </a>
             </article>
 
-            <article className="glass rounded-3xl p-7 sm:p-8">
+            <article className="border-t border-white/10 py-9 md:border-t-0 md:px-10 md:py-11">
               <p className="text-5xl font-semibold tracking-[-0.05em] text-[#69a2ff]">56%</p>
               <h3 className="mt-5 text-xl font-semibold">pesquisam produtos e serviços</h3>
               <p className="mt-3 text-sm leading-6 text-white/55">Dos usuários brasileiros de internet buscaram informações sobre produtos ou serviços em 2024.</p>
@@ -232,64 +231,18 @@ export default function Home() {
                 Fonte: Cetic.br <ExternalLink aria-hidden="true" size={13} />
               </a>
             </article>
-
-            <article className="glass rounded-3xl p-7 sm:p-8">
-              <p className="text-5xl font-semibold tracking-[-0.05em] text-[#c16bff]">94%</p>
-              <h3 className="mt-5 text-xl font-semibold">chegam informados ao contato</h3>
-              <p className="mt-3 text-sm leading-6 text-white/55">Dos clientes B2B pesquisados pelo Google estavam parcial ou totalmente informados antes de falar com uma empresa.</p>
-              <a className="mt-6 inline-flex items-center gap-2 text-xs font-medium text-white/40 transition hover:text-white/70" href="https://business.google.com/br/think/consumer-insights/b2b-jornada-pesquisa/" target="_blank" rel="noreferrer">
-                Fonte: Think with Google <ExternalLink aria-hidden="true" size={13} />
-              </a>
-            </article>
           </div>
 
-          <div className="mt-6 grid overflow-hidden rounded-[32px] border border-white/10 bg-[#08082b] lg:grid-cols-[0.8fr_1.2fr]">
-            <div className="border-b border-white/10 p-7 sm:p-10 lg:border-b-0 lg:border-r">
-              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#EBF400]">Empresas com site próprio</span>
-              <h3 className="mt-4 text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">A presença de um site cresce junto com o porte da empresa.</h3>
-              <p className="mt-5 leading-7 text-white/55">
-                Entre as pequenas empresas brasileiras conectadas, menos da metade possuía um site próprio em 2024.
-              </p>
-              <div className="mt-8 flex gap-4 rounded-2xl border border-[#EBF400]/15 bg-[#EBF400]/[0.05] p-5">
-                <Smartphone aria-hidden="true" className="mt-0.5 shrink-0 text-[#EBF400]" size={24} />
-                <p className="text-sm leading-6 text-white/65"><strong className="text-white">30% dos usuários</strong> acessavam a internet apenas pelo celular. Por isso, um site precisa funcionar bem em telas menores.</p>
-              </div>
-            </div>
-
-            <div className="flex flex-col justify-center p-7 sm:p-10">
-              <div className="space-y-8" role="img" aria-label="Gráfico: 49% das pequenas empresas, 76% das médias e 81% das grandes possuíam site próprio em 2024">
-                {[
-                  ["Pequenas empresas", 49],
-                  ["Médias empresas", 76],
-                  ["Grandes empresas", 81],
-                ].map(([label, value]) => (
-                  <div key={label}>
-                    <div className="mb-3 flex items-end justify-between gap-4">
-                      <span className="text-sm font-medium text-white/70">{label}</span>
-                      <span className="text-2xl font-semibold text-white">{value}%</span>
-                    </div>
-                    <div className="h-3 overflow-hidden rounded-full bg-white/[0.06]">
-                      <div className="h-full rounded-full bg-gradient-to-r from-[#005CFF] via-[#5d58ff] to-[#EBF400]" style={{ width: `${value}%` }} />
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <a className="mt-9 inline-flex items-center gap-2 self-start text-xs font-medium text-white/40 transition hover:text-white/70" href="https://cetic.br/media/docs/publicacoes/2/20250512122204/tic_empresas_2024_livro_eletronico.pdf" target="_blank" rel="noreferrer">
-                Fonte: TIC Empresas 2024, Cetic.br <ExternalLink aria-hidden="true" size={13} />
-              </a>
-            </div>
-          </div>
-
-          <div className="relative mt-6 overflow-hidden rounded-[32px] border border-[#EBF400]/20 bg-gradient-to-r from-[#0e0e45] via-[#101051] to-[#091536] px-7 py-10 sm:px-10 lg:flex lg:items-center lg:justify-between lg:gap-10">
+          <div className="relative mt-12 overflow-hidden rounded-[32px] border border-[#EBF400]/20 bg-gradient-to-r from-[#0e0e45] via-[#101051] to-[#091536] px-7 py-10 sm:px-10 lg:flex lg:items-center lg:justify-between lg:gap-10">
             <div className="pointer-events-none absolute -right-16 -top-28 size-72 rounded-full bg-[#EBF400]/10 blur-3xl" aria-hidden="true" />
             <div className="relative max-w-2xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#EBF400]">Sua empresa também pode avançar</p>
-              <h3 className="mt-3 text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">Apresente seu negócio com clareza quando o cliente estiver pesquisando.</h3>
-              <p className="mt-4 leading-7 text-white/60">Vamos conversar sobre o momento da sua empresa e entender qual site faz sentido para ela.</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#EBF400]">A pesquisa já começou</p>
+              <h3 className="mt-3 text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">Seu próximo cliente pode estar pesquisando agora.</h3>
+              <p className="mt-4 leading-7 text-white/60">Com um site profissional, ele encontra informações claras, conhece seu trabalho e chega ao contato mais preparado para conversar.</p>
             </div>
             <WhatsAppLink className="relative mt-7 shrink-0 lg:mt-0">
               <MessageCircle aria-hidden="true" size={20} />
-              Quero um site profissional
+              Quero ser encontrado pelos meus clientes
             </WhatsAppLink>
           </div>
         </div>
