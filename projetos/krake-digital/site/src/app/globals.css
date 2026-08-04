@@ -101,17 +101,17 @@ a {
     linear-gradient(180deg, rgba(2, 2, 30, 0) 0%, rgba(8, 11, 48, 0.7) 50%, rgba(2, 2, 30, 0) 100%);
 }
 
-.cta-krake-symbol {
+.hero-krake-symbol {
   position: absolute;
-  right: -72px;
-  bottom: -118px;
-  width: 430px;
+  right: -105px;
+  bottom: -135px;
+  width: 540px;
   aspect-ratio: 1;
   pointer-events: none;
-  background: #02021e;
-  opacity: 0.08;
+  background: #ebf400;
+  opacity: 0.065;
   mask: url("/brand/krake-symbol-yellow.svg") center / contain no-repeat;
-  animation: krake-float 8s ease-in-out infinite;
+  animation: krake-float 10s ease-in-out infinite;
 }
 
 @keyframes krake-float {
@@ -159,12 +159,11 @@ a {
     padding-block: 76px;
   }
 
-  .cta-krake-symbol {
-    right: 50%;
-    bottom: -108px;
-    width: 340px;
-    transform: translateX(50%);
-    animation: none;
+  .hero-krake-symbol {
+    right: -120px;
+    bottom: -80px;
+    width: 360px;
+    opacity: 0.045;
   }
 }
 

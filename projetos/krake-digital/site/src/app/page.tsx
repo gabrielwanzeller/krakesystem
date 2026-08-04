@@ -165,6 +165,7 @@ export default function Home() {
 
       <section id="inicio" className="relative min-h-[calc(100svh-80px)] border-b border-white/10">
         <div className="grid-lines absolute inset-0" aria-hidden="true" />
+        <span className="hero-krake-symbol" aria-hidden="true" />
         <div className="container-site relative flex min-h-[calc(100svh-80px)] items-center justify-center py-20 text-center">
           <div className="flex w-full max-w-5xl flex-col items-center">
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-4 py-2 text-sm text-white/75">
@@ -517,7 +518,6 @@ export default function Home() {
       <section className="section-pad section-gradient-brand">
         <div className="container-site">
           <div className="relative overflow-hidden rounded-[36px] bg-[#EBF400] px-7 py-16 text-center text-[#02021E] sm:px-12 sm:py-20">
-            <span className="cta-krake-symbol" aria-hidden="true" />
             <div className="relative z-10">
               <h2 className="mx-auto mt-6 max-w-4xl text-4xl font-semibold tracking-[-0.04em] sm:text-6xl">Vamos transformar a presença digital da sua empresa?</h2>
               <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#02021E]/65">Conte um pouco sobre seu negócio. Vamos conversar com clareza e entender qual solução faz sentido para você.</p>
