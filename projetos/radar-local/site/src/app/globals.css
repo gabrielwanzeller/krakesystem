@@ -30,4 +30,22 @@ button,a { -webkit-tap-highlight-color:transparent; }
 .theme-light .company-card-ui strong,.theme-light .company-card-ui h2 { color:#11122d; }
 .theme-light .company-card-ui a:not([class*="bg-white"]) { color:#4f5066; border-color:#d8dae5; }
 .theme-light select { color:#11122d; background:#fff; border-color:#d7d9e4; }
+.theme-light .section-eyebrow,.theme-light .results-label { color:#5f6074; }
+.theme-light .section-description { color:#5e6073; }
+.theme-light .stats-ui { color:#11122d; }
+.theme-light .stats-ui > div:not(:last-child) { border-color:#d9dbe6; }
+.theme-light .stats-ui span { color:#656779; }
+.theme-light .results-count { color:#11122d; }
+.theme-light .company-chip { border-color:#c9ccd8; background:#f7f8fb; color:#44465c; }
+.theme-light .company-chip.has-site { border-color:#9aa638; background:#f7f9d9; color:#4a5200; }
+.theme-light .company-location,.theme-light .review-count-ui { color:#626477; }
+.theme-light .rating-ui { color:#725b00; }
+.theme-light .company-avatar { border-color:#cfd2df; background:#eceef5; color:#36384f; }
+.theme-light .sidebar-nav-item:not(.is-active) { color:#55576d; }
+.theme-light .sidebar-nav-item:not(.is-active):hover { background:#f0f1f6; color:#15162d; }
+.theme-light .app-sidebar > div:last-child { border-color:#dfe1eb; }
+.theme-light .app-sidebar > div:last-child > button:first-child { color:#55576d; }
+.theme-light .app-sidebar > div:last-child > button:last-child { background:#f1f2f7; color:#202139; }
+.theme-light .modal-panel label,.theme-light .drawer-panel dt { color:#5f6174; }
+.theme-light .drawer-panel > div > p,.theme-light .modal-panel header p { color:#626477; }
 @media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; animation:none!important; transition:none!important; } }
