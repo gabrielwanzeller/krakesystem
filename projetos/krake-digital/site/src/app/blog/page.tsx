@@ -3,7 +3,6 @@ import Link from "next/link";
 import { ArrowRight, BookOpen, MessageCircle } from "lucide-react";
 import { BlogFooter } from "@/components/blog-footer";
 import { BlogHeader } from "@/components/blog-header";
-import { buttonVariants } from "@/components/ui/button";
 import { blogPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
@@ -41,7 +40,12 @@ export default function BlogPage() {
           </div>
           <div className="grid gap-6 lg:grid-cols-3">
             {blogPosts.map((post, index) => (
-              <article key={post.slug} className="glass group flex min-h-[390px] flex-col rounded-[30px] p-7 transition hover:-translate-y-1 hover:border-[#EBF400]/30 sm:p-8">
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="glass focus-ring group flex min-h-[390px] flex-col rounded-[30px] p-7 transition hover:-translate-y-1 hover:border-[#EBF400]/30 hover:bg-[#0e0e45]/80 sm:p-8"
+                aria-label={`Ler artigo: ${post.title}`}
+              >
                 <div className="flex items-center justify-between gap-4 text-xs text-white/45">
                   <span className="font-semibold uppercase tracking-[0.14em] text-[#EBF400]">{post.category}</span>
                   <span>{post.readingTime}</span>
@@ -49,10 +53,10 @@ export default function BlogPage() {
                 <p className="mt-10 text-6xl font-semibold tracking-[-0.06em] text-white/[0.08]">0{index + 1}</p>
                 <h2 className="mt-4 text-2xl font-semibold leading-9 tracking-[-0.025em]">{post.title}</h2>
                 <p className="mt-4 text-sm leading-7 text-white/55">{post.description}</p>
-                <Link className="focus-ring mt-auto inline-flex items-center gap-2 self-start rounded pt-7 font-semibold text-[#EBF400]" href={`/blog/${post.slug}`}>
+                <span className="mt-auto inline-flex items-center gap-2 self-start pt-7 font-semibold text-[#EBF400]">
                   Ler artigo <ArrowRight size={17} className="transition group-hover:translate-x-1" />
-                </Link>
-              </article>
+                </span>
+              </Link>
             ))}
           </div>
 
@@ -61,7 +65,7 @@ export default function BlogPage() {
               <p className="text-sm font-semibold uppercase tracking-[0.18em]">Precisa de orientação para sua empresa?</p>
               <h2 className="mt-3 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">Converse diretamente com quem vai cuidar do seu projeto.</h2>
             </div>
-            <a className={buttonVariants({ variant: "primary", size: "lg", className: "mt-7 bg-[#02021E] text-white shadow-none hover:bg-[#0E0E45] lg:mt-0" })} href="https://wa.me/5561984494617?text=Ol%C3%A1%2C%20Gabriel!%20Conheci%20a%20Krake%20pelo%20blog%20e%20gostaria%20de%20conversar." target="_blank" rel="noreferrer">
+            <a className="focus-ring mt-7 inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-[#02021E] px-7 text-base font-semibold text-white shadow-[0_12px_36px_rgba(2,2,30,0.24)] transition hover:-translate-y-0.5 hover:bg-[#0E0E45] lg:mt-0" href="https://wa.me/5561984494617?text=Ol%C3%A1%2C%20Gabriel!%20Conheci%20a%20Krake%20pelo%20blog%20e%20gostaria%20de%20conversar." target="_blank" rel="noreferrer">
               <MessageCircle size={20} /> Conversar no WhatsApp
             </a>
           </div>
@@ -71,4 +75,3 @@ export default function BlogPage() {
     </main>
   );
 }
-
