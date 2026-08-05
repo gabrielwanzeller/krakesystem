@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root { --background:#02021e; --foreground:#f8f9ff; --card:#090928; --card-strong:#10103b; --line:#242449; --muted:#9b9caf; --accent:#ebf400; }
+* { box-sizing:border-box; }
+html { background:var(--background); }
+body { margin:0; background:radial-gradient(circle at 75% -10%,#17175c55,transparent 35%),var(--background); color:var(--foreground); font-family:"Poppins",sans-serif; }
+button,a,input,select,textarea { font:inherit; }
+button,a { -webkit-tap-highlight-color:transparent; }
+::selection { background:#ebf400; color:#02021e; }
+@keyframes rise { from { opacity:0; transform:translateY(7px) } to { opacity:1; transform:none } }
+.animate-card { animation:rise .35s ease both; }
+.contact-markers { display:flex; align-items:center; flex-wrap:wrap; gap:7px; color:#85869a; font-size:10px; }
+.contact-markers > span { margin-right:3px; }
+.contact-markers button { display:inline-flex; align-items:center; gap:5px; min-height:30px; padding:0 9px; border:1px solid #34345d; border-radius:999px; color:#a7a8bb; background:#0b0b2b; transition:.18s; }
+.contact-markers button:hover { border-color:#5e5f84; color:white; }
+.contact-markers button.active { border-color:#64712e; background:#272b10; color:#eaf679; }
+.client-summary { display:flex; align-items:center; flex-wrap:wrap; gap:10px; border:1px solid #31533a; background:#0d2315; border-radius:12px; padding:10px 13px; font-size:11px; color:#a4bea9; }
+.client-summary strong { color:#a9e68c; }.client-summary .paid { color:#91e5a4; }.client-summary .pending { color:#ffd575; }
+.form-section-title { margin-bottom:14px; color:#ebf400; font-size:11px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; }
+.theme-light { min-height:100vh; background:#f4f5f9; color:#11122d; }
+.theme-light .app-sidebar { background:#fff; border-color:#dfe1eb; }
+.theme-light .app-header { background:#f8f9fbe8; border-color:#dfe1eb; }
+.theme-light .company-card-ui { background:linear-gradient(145deg,#fff,#f5f6fa); border-color:#dfe1ea; box-shadow:0 8px 30px #1c22500a; }
+.theme-light .input-ui { background:#fff; border-color:#d7d9e4; color:#11122d; }
+.theme-light .modal-panel,.theme-light .drawer-panel { background:#f8f9fc; color:#11122d; border-color:#d9dbe6; }
+.theme-light .stats-ui,.theme-light .tasks-panel { background:#fff; border-color:#d9dbe6; }
+.theme-light .contact-markers button { background:#fff; border-color:#d9dbe6; color:#52536a; }
+.theme-light .contact-markers button.active { background:#f4f8c7; border-color:#afb643; color:#343900; }
+.theme-light .company-card-ui strong,.theme-light .company-card-ui h2 { color:#11122d; }
+.theme-light .company-card-ui a:not([class*="bg-white"]) { color:#4f5066; border-color:#d8dae5; }
+.theme-light select { color:#11122d; background:#fff; border-color:#d7d9e4; }
+@media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; animation:none!important; transition:none!important; } }
