@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { ProjectShowcase } from "@/components/project-showcase";
+import { AnimatedNumber, Marker, RevealGroup, Typewriter } from "@/components/scroll-animations";
 import { cn } from "@/lib/utils";
 
 const whatsappUrl =
@@ -212,7 +213,7 @@ export default function Home() {
 
           <div className="mt-14 grid border-y border-white/10 md:grid-cols-2">
             <article className="py-9 md:border-r md:border-white/10 md:px-10 md:py-11">
-              <p className="text-5xl font-semibold tracking-[-0.05em] text-[#EBF400]">89%</p>
+              <p className="text-5xl font-semibold tracking-[-0.05em] text-[#EBF400]"><AnimatedNumber value={89} /></p>
               <h3 className="mt-5 text-xl font-semibold">do Brasil está conectado</h3>
               <p className="mt-3 text-sm leading-6 text-white/55">Parcela da população com 10 anos ou mais que utilizava a internet em 2024, pelo indicador ampliado.</p>
               <a className="mt-6 inline-flex items-center gap-2 text-xs font-medium text-white/40 transition hover:text-white/70" href="https://cetic.br/media/docs/publicacoes/2/pt-br/20251027170648/tic_domicilios_2024_livro_eletronico.pdf" target="_blank" rel="noreferrer">
@@ -221,7 +222,7 @@ export default function Home() {
             </article>
 
             <article className="border-t border-white/10 py-9 md:border-t-0 md:px-10 md:py-11">
-              <p className="text-5xl font-semibold tracking-[-0.05em] text-[#69a2ff]">56%</p>
+              <p className="text-5xl font-semibold tracking-[-0.05em] text-[#69a2ff]"><AnimatedNumber value={56} /></p>
               <h3 className="mt-5 text-xl font-semibold">pesquisam produtos e serviços</h3>
               <p className="mt-3 text-sm leading-6 text-white/55">Dos usuários brasileiros de internet buscaram informações sobre produtos ou serviços em 2024.</p>
               <a className="mt-6 inline-flex items-center gap-2 text-xs font-medium text-white/40 transition hover:text-white/70" href="https://cetic.br/media/docs/publicacoes/2/pt-br/20251027170648/tic_domicilios_2024_livro_eletronico.pdf" target="_blank" rel="noreferrer">
@@ -249,7 +250,7 @@ export default function Home() {
         <div className="container-site">
           <div className="mx-auto max-w-4xl text-center">
             <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#EBF400]">A jornada até o contato</span>
-            <h2 className="mt-4 text-4xl font-semibold tracking-[-0.035em] sm:text-5xl">O caminho do seu cliente começa antes da conversa.</h2>
+            <h2 className="mt-4 text-4xl font-semibold tracking-[-0.035em] sm:text-5xl">O caminho do seu cliente começa <Marker variant="underline">antes da conversa.</Marker></h2>
             <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-white/60">
               Antes de mandar uma mensagem, muitas pessoas pesquisam sua empresa. O que elas encontram pode aumentar a confiança ou fazer com que continuem procurando.
             </p>
@@ -267,9 +268,10 @@ export default function Home() {
                 </div>
               </div>
 
-              <ol className="mt-8">
+              <RevealGroup className="journey-reveal mt-8">
+              <ol>
                 {journeyWithoutSite.map(([title, text], index) => (
-                  <li key={title} className="relative grid grid-cols-[40px_1fr] gap-4 pb-8 last:pb-0">
+                  <li key={title} className="journey-step relative grid grid-cols-[40px_1fr] gap-4 pb-8 last:pb-0" style={{ "--step-index": index } as React.CSSProperties}>
                     {index < journeyWithoutSite.length - 1 && (
                       <span className="absolute left-[19px] top-10 h-[calc(100%-24px)] w-px bg-gradient-to-b from-[#ff7d7d]/45 to-[#ff7d7d]/5" aria-hidden="true" />
                     )}
@@ -283,6 +285,7 @@ export default function Home() {
                   </li>
                 ))}
               </ol>
+              </RevealGroup>
             </article>
 
             <article className="relative overflow-hidden rounded-[32px] border border-[#EBF400]/25 bg-[#08112b]/90 p-7 sm:p-9">
@@ -297,9 +300,10 @@ export default function Home() {
                 </div>
               </div>
 
-              <ol className="relative mt-8">
+              <RevealGroup className="journey-reveal relative mt-8">
+              <ol>
                 {journeyWithSite.map(([title, text], index) => (
-                  <li key={title} className="relative grid grid-cols-[40px_1fr] gap-4 pb-8 last:pb-0">
+                  <li key={title} className="journey-step relative grid grid-cols-[40px_1fr] gap-4 pb-8 last:pb-0" style={{ "--step-index": index } as React.CSSProperties}>
                     {index < journeyWithSite.length - 1 && (
                       <span className="absolute left-[19px] top-10 h-[calc(100%-24px)] w-px bg-gradient-to-b from-[#EBF400]/55 to-[#005CFF]/15" aria-hidden="true" />
                     )}
@@ -313,6 +317,7 @@ export default function Home() {
                   </li>
                 ))}
               </ol>
+              </RevealGroup>
             </article>
           </div>
 
@@ -332,7 +337,7 @@ export default function Home() {
         <div className="container-site">
           <div className="max-w-3xl">
             <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#EBF400]">Soluções</span>
-            <h2 className="mt-4 text-4xl font-semibold tracking-[-0.035em] sm:text-5xl">A estrutura digital para sua empresa avançar.</h2>
+            <h2 className="mt-4 text-4xl font-semibold tracking-[-0.035em] sm:text-5xl">A estrutura digital para sua <Typewriter text="empresa avançar." /></h2>
             <p className="mt-5 text-lg leading-8 text-white/60">Começamos pelo que sua empresa realmente precisa e construímos uma solução clara, útil e preparada para evoluir.</p>
           </div>
 
@@ -375,15 +380,15 @@ export default function Home() {
         <div className="container-site">
           <div className="text-center">
             <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#EBF400]">Como funciona</span>
-            <h2 className="mx-auto mt-4 max-w-3xl text-4xl font-semibold tracking-[-0.035em] sm:text-5xl">Do primeiro contato ao site no ar.</h2>
+            <h2 className="mx-auto mt-4 max-w-3xl text-4xl font-semibold tracking-[-0.035em] sm:text-5xl">Do primeiro contato ao <Marker variant="underline">site no ar.</Marker></h2>
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-white/60">Você acompanha cada etapa, entende o que está sendo feito e participa das decisões importantes.</p>
           </div>
 
           <div className="relative mt-16">
             <div className="absolute left-[12.5%] right-[12.5%] top-12 hidden h-px bg-gradient-to-r from-[#005CFF]/60 via-[#A700FF]/50 to-[#70e6a1]/30 lg:block" aria-hidden="true" />
-            <div className="relative grid gap-6 lg:grid-cols-4">
-              {process.map(({ number, title, text, delivery, icon: Icon, iconClass }) => (
-                <article key={number} className="glass relative rounded-3xl p-6 lg:p-7">
+            <RevealGroup className="process-reveal relative grid gap-6 lg:grid-cols-4">
+              {process.map(({ number, title, text, delivery, icon: Icon, iconClass }, index) => (
+                <article key={number} className="process-card glass relative rounded-3xl p-6 lg:p-7" style={{ "--step-index": index } as React.CSSProperties}>
                   <div className={cn("relative z-10 flex size-16 items-center justify-center rounded-2xl border shadow-xl shadow-black/20 lg:size-20 lg:rounded-[22px]", iconClass)}>
                     <Icon aria-hidden="true" size={28} className="lg:size-8" />
                     <span className="absolute -right-2 -top-2 flex size-7 items-center justify-center rounded-full border border-white/15 bg-[#02021E] text-[10px] font-semibold text-white/65 lg:size-8 lg:text-xs">{number}</span>
@@ -398,7 +403,7 @@ export default function Home() {
                   </div>
                 </article>
               ))}
-            </div>
+            </RevealGroup>
           </div>
 
           <div className="mt-12 flex flex-col items-center justify-between gap-6 text-center lg:flex-row lg:text-left">

@@ -150,6 +150,80 @@ a {
   background-clip: text;
 }
 
+.marker {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+}
+
+.marker-underline::after {
+  position: absolute;
+  right: -0.04em;
+  bottom: -0.09em;
+  left: -0.04em;
+  z-index: -1;
+  height: 0.16em;
+  content: "";
+  background: #70e6a1;
+  border-radius: 999px 45% 999px 38%;
+  opacity: 0.9;
+  transform: scaleX(0) rotate(-1.5deg);
+  transform-origin: left center;
+  transition: transform 780ms cubic-bezier(0.22, 1, 0.36, 1) 140ms;
+}
+
+.marker-circle::after {
+  position: absolute;
+  inset: -0.12em -0.2em -0.08em;
+  z-index: -1;
+  content: "";
+  border: 0.06em solid #70e6a1;
+  border-radius: 48% 54% 45% 52%;
+  opacity: 0;
+  transform: scale(0.72) rotate(-2deg);
+  transition: opacity 260ms ease, transform 760ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.marker-underline.is-visible::after {
+  transform: scaleX(1) rotate(-1.5deg);
+}
+
+.marker-circle.is-visible::after {
+  opacity: 0.9;
+  transform: scale(1) rotate(-2deg);
+}
+
+.typewriter {
+  position: relative;
+  display: inline-block;
+}
+
+.journey-step,
+.process-card {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 650ms ease,
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: calc(var(--step-index) * var(--reveal-step));
+}
+
+.journey-reveal.is-visible .journey-step,
+.process-reveal.is-visible .process-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.journey-step > span:first-child {
+  transform: scale(0.75);
+  transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: calc((var(--step-index) * var(--reveal-step)) + 180ms);
+}
+
+.journey-reveal.is-visible .journey-step > span:first-child {
+  transform: scale(1);
+}
+
 .grid-lines {
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
@@ -202,4 +276,20 @@ a {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+
+  .journey-step,
+  .process-card {
+    opacity: 1;
+    transform: none;
+  }
+
+  .marker-underline::after {
+    transform: scaleX(1) rotate(-1.5deg);
+  }
+
+  .marker-circle::after {
+    opacity: 0.9;
+    transform: scale(1) rotate(-2deg);
+  }
+
 }
