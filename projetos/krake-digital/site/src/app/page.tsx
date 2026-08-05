@@ -27,20 +27,16 @@ const whatsappUrl =
 
 const journeyWithoutSite = [
   ["Surge uma necessidade", "O cliente percebe que precisa de um produto ou serviço."],
-  ["Ele pesquisa no Google", "Antes de conversar, procura empresas e compara alternativas."],
-  ["Encontra poucas informações", "Não consegue entender claramente seus serviços ou diferenciais."],
-  ["A confiança diminui", "Sem respostas suficientes, fica inseguro para iniciar o contato."],
-  ["Continua procurando", "Mesmo que seu trabalho seja excelente, ele ainda não conseguiu perceber isso."],
-  ["Outra empresa recebe o contato", "Um concorrente mais bem apresentado pode se tornar a escolha mais fácil."],
+  ["Pesquisa e compara", "Antes de conversar, procura empresas e avalia as alternativas disponíveis."],
+  ["Não encontra respostas", "Sem informações claras, não entende seus serviços nem sente segurança para entrar em contato."],
+  ["Escolhe outra empresa", "Um concorrente mais bem apresentado acaba se tornando a escolha mais fácil."],
 ];
 
 const journeyWithSite = [
-  ["Surge uma necessidade", "O cliente começa a procurar uma empresa que possa ajudá-lo."],
-  ["Encontra sua empresa", "Sua presença digital facilita a descoberta e a avaliação."],
-  ["Conhece melhor o negócio", "O site apresenta serviços, diferenciais e sua forma de trabalhar."],
-  ["Encontra respostas", "Informações claras diminuem as dúvidas antes do primeiro contato."],
-  ["Sente mais confiança", "Uma apresentação profissional reforça o valor percebido da empresa."],
-  ["Conversa com você", "O cliente encontra um caminho simples para chamar sua empresa no WhatsApp."],
+  ["Pesquisa uma solução", "O cliente começa a procurar uma empresa que possa ajudá-lo."],
+  ["Encontra sua empresa", "Seu site facilita a descoberta e apresenta o negócio de forma profissional."],
+  ["Entende e confia", "Serviços e diferenciais bem explicados reduzem dúvidas e aumentam a segurança."],
+  ["Conversa com você", "Um caminho simples leva o cliente interessado diretamente para o WhatsApp."],
 ];
 
 const process = [
